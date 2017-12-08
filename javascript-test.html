@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Learning to cosw</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<script>
+	// json data
+	var data = [
+		{
+			name: "Joe D'orazio",
+			sex:  "M",
+			dob:  "July 27, 1922",
+			notes:"United Kingdom Oldest British Wrestler and referee still living."
+		},
+
+		{
+			name: "Bill Mercer",
+			sex:  "M",
+			dob:  "February 13, 1926",
+			notes:"United States Voice of World Class Championship Wrestling."
+		},
+
+		{
+			name: "Carlos Rocha",
+			sex:  "M",
+			dob:  "February 2, 1927",
+			notes:"Portugal First Portuguese wrestler to wrestle in WWWF."
+		},
+
+		{
+			name: "\"Cowboy\" Bob Ellis",
+			sex:  "M",
+			dob:  "March 15, 1929",
+			notes:"United States Known as the inventor of the bulldog."
+		},
+
+		{
+			name: "Joe Cornelius",
+			sex:  "M",
+			dob:  "May 1, 1929",
+			notes:"United Kingdom Lives in London, UK."
+		},
+
+		{
+			name: "Pampero Firpo",
+			sex:  "M",
+			dob:  "April 6, 1930",
+			notes:"Argentina Lives in the United States."
+		},
+
+		{
+			name: "Jacques Rougeau Sr.",
+			sex:  "M",
+			dob:  "May 27, 1930",
+			notes:"Canada Oldest Canadian Wrestler. Wrestled mainly in Montreal, Quebec as well as Japan and the NWA"
+		},
+
+		{
+			name: "Len Rossi",
+			sex:  "M",
+			dob:  "1930",
+			notes:"United States Tennessee legend"
+		},
+
+		{
+			name: "Don Leo Jonathan",
+			sex:  "M",
+			dob:  "April 29, 1931",
+			notes:"United States Lives in Canada."
+		},
+
+		{
+			name: "Dick Beyer",
+			sex:  "M",
+			dob:  "July 11, 1931",
+			notes:"United States Best known for portraying the masked wrestlers The Destroyer and Doctor X. Father of Kurt Beyer. Oldest living World Heavyweight Champion (AWA)"
+		},
+
+		{
+			name: "Dave Kidney",
+			sex:  "M",
+			dob:  "1931",
+			notes:"United Kingdom Oldest British wrestler to ever wrestle."
+		},
+
+		{
+			name: "Dominic DeNucci",
+			sex:  "M",
+			dob:  "January 23, 1932",
+			notes:"Italy Former WWWF Tag Team Champion"
+		},
+
+		{
+			name: "Billy Two Rivers",
+			sex:  "M",
+			dob:  "May 5, 1932",
+			notes:"Canada Wrestled mostly in Canada and the U.S. An actual Mohawk chief."
+		},
+
+		{
+			name: "Danny Hodge",
+			sex:  "M",
+			dob:  "May 13, 1932",
+			notes:"United States Wrestled in AWA, NWA, and UWF."
+		},
+
+		{
+			name: "Rene Goulet",
+			sex:  "M",
+			dob:  "July 12, 1932",
+			notes:"Canada[7] Wrestled in the WWWF(WWF) from 1971-1987 and later worked as a road agent for WWF until 1997."
+		},
+
+		{
+			name: "Gene LeBell",
+			sex:  "M",
+			dob:  "October 9, 1932",
+			notes:"United States Los Angeles promoter and announcer"
+		},
+
+		{
+			name: "Caswell Martin",
+			sex:  "M",
+			dob:  "1932",
+			notes:"The Bahamas Wrestled in the UK, Germany and Japan."
+		},
+
+		{
+			name: "Stan Holek",
+			sex:  "M",
+			dob:  "April 4, 1933",
+			notes:"Canada Lives in the United States."
+		},
+
+		{
+			name: "Dick Steinborn",
+			sex:  "M",
+			dob:  "September 28, 1933",
+			notes:"United States Wrestled in NWA Georgia in the 1960's and 1970's"
+		},
+
+		{
+			name: "Les Thornton",
+			sex:  "M",
+			dob:  "April 9, 1934",
+			notes:"United Kingdom Former WWF Junior Heavyweight Champion. Resides in Calgary, Canada."
+		},
+
+		{
+			name: "Mr. Wrestling II",
+			sex:  "M",
+			dob:  "September 10, 1934",
+			notes:"United States Former NWA Florida Champion."
+		},
+
+		{
+			name: "Jose Lothario",
+			sex:  "M",
+			dob:  "December 12, 1934",
+			notes:"Mexico Trainer of Shawn Michaels."
+		},
+
+		{
+			name: "Guillotine Gordon",
+			sex:  "M",
+			dob:  "January 14, 1935",
+			notes:"United States Wrestled in the WWWF from 1964-1969"
+		},
+
+		{
+			name: "Dory Dixon",
+			sex:  "M",
+			dob:  "February 1, 1935",
+			notes:"Jamaica First Jamaican wrestler in the WWWF"
+		},
+
+		{
+			name: "Bruno Sammartino",
+			sex:  "M",
+			dob:  "October 6, 1935",
+			notes:"Italy The longest-reigning WWWF Champion and oldest living holder of the title."
+		},
+
+		{
+			name: "Blackjack Lanza",
+			sex:  "M",
+			dob:  "October 14, 1935",
+			notes:"United States Long-standing WWF road agent. Member of The Blackjacks."
+		},
+
+		{
+			name: "Ricky Hunter",
+			sex:  "M",
+			dob:  "March 1, 1936",
+			notes:"Canada Known as the Gladiator in Florida and a jobber in WWF"
+		},
+
+		{
+			name: "Beauregarde",
+			sex:  "M",
+			dob:  "April 27, 1936",
+			notes:"United States Known in the Pacific Northwest Wrestling and is a musician."
+		},
+
+		{
+			name: "Larry Hennig",
+			sex:  "M",
+			dob:  "June 18, 1936",
+			notes:"United States \"The Axe\". Father of Curt Hennig. AWA legend."
+		},
+
+		{
+			name: "Black Gordman",
+			sex:  "M",
+			dob:  "October 5, 1936",
+			notes:"Mexico Teamed up with the Great Goliath winning many tag team titles in the 1970's. Spent most of his career in Los Angeles."
+		},
+
+		{
+			name: "Mark Lewin",
+			sex:  "M",
+			dob:  "March 16, 1937",
+			notes:"United States Multi-time regional champion, member of Kevin Sullivan's Army of Darkness."
+		},
+
+		{
+			name: "Kenny Jay",
+			sex:  "M",
+			dob:  "March 27, 1937",
+			notes:"United States Known as a jobber in the American Wrestling Association"
+		},
+
+		{
+			name: "Erich Froelich",
+			sex:  "M",
+			dob:  "May 3, 1937",
+			notes:"Germany Lives in Canada. Spent most of his career in NWA: All-Star Wrestling"
+		},
+
+		{
+			name: "Jerry Brown",
+			sex:  "M",
+			dob:  "May 10, 1937",
+			notes:"United States One half of the famous 70's tag team known as The Hollywood Blondes."
+		},
+
+		{
+			name: "Zivko Kovacic",
+			sex:  "M",
+			dob:  "September 30, 1937",
+			notes:"Croatia First Yugoslavian wrestler to wrestle in the WWWF."
+		},
+
+		{
+			name: "Estrella Blanca",
+			sex:  "M",
+			dob:  "January 15, 1938",
+			notes:"Mexico Former AWA World Lightweight Championship"
+		},
+
+		{
+			name: "Angelo Mosca",
+			sex:  "M",
+			dob:  "March 13, 1938",
+			notes:"United States Dual-sport star with CFL in Canada."
+		},
+
+		{
+			name: "Omar Atlas",
+			sex:  "M",
+			dob:  "April 22, 1938",
+			notes:"Venezuela Former NWA Central States Champion."
+		},
+
+		{
+			name: "Paul Vachon",
+			sex:  "M",
+			dob:  "May 14, 1938",
+			notes:"Canada Former AWA Tag Team Champion."
+		},
+
+		{
+			name: "Johnny Rodz",
+			sex:  "M",
+			dob:  "May 16, 1938",
+			notes:"United States WWE Hall of Famer and notable jobber in WWWF (WWF) from 1965-1985."
+		}
+	]
+	
+	function dateOfBirthToAge(dateOfBirth) {
+	   var ageDifMs = Date.now() - dateOfBirth.getTime();
+	   var ageDate = new Date(ageDifMs); // miliseconds from epoch
+	   var years = Math.abs(ageDate.getUTCFullYear() - 1970);
+	   ageDate.setFullYear(ageDate.getFullYear() - years);
+	   var days = Math.round(ageDate/(1000*60*60*24));
+	   return years + " years and " + days + " day" + (days !== 1 ? "s" : "");
+	 }
+	
+	for(var counter=0; counter<data.length; counter=counter+1) {
+		var wrestler = data[counter];
+		document.write("<u><b>Name</u>: </b>" + wrestler.name + "<br>");
+		document.write("<u><b>Sex</u>: </b>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + wrestler.sex + "<br>");
+		document.write("<u><b>DOB</u>: </b>" + "&nbsp;&nbsp;" + wrestler.dob + "<br>");
+		document.write("<u><b>Age</u>: </b>" + dateOfBirthToAge(new Date(wrestler.dob)) + "<br>");
+		document.write("<u><b>Notes</u>: </b>" + "&nbsp;" + wrestler.notes + "<br>" + "<br>"); 
+	}
+	
+	/**
+	Joe D'orazio
+	M
+	July 27, 1922
+	United Kingdom Oldest British Wrestler and referee still living.
+
+	Bill Mercer
+	M
+	91 years, 293 days
+	February 13, 1926
+	United States Voice of World Class Championship Wrestling.
+
+	Carlos Rocha
+	M
+	90 years, 304 days
+	February 2, 1927
+	Portugal First Portuguese wrestler to wrestle in WWWF.
+
+	"Cowboy" Bob Ellis
+	M
+	88 years, 263 days
+	March 15, 1929
+	United States Known as the inventor of the bulldog.[5]
+
+	Joe Cornelius
+	M
+	88 years, 216 days
+	May 1, 1929
+	United Kingdom Lives in London, UK.
+
+	Pampero Firpo
+	M
+	87 years, 241 days
+	April 6, 1930
+	Argentina Lives in the United States.
+
+	Jacques Rougeau Sr.
+	M
+	87 years, 190 days
+	May 27, 1930
+	Canada Oldest Canadian Wrestler. Wrestled mainly in Montreal, Quebec as well as Japan and the NWA
+
+	Len Rossi
+	M
+	86 years
+	1930
+	United States Tennessee legend
+
+	Don Leo Jonathan
+	M
+	86 years, 218 days
+	April 29, 1931
+	United States Lives in Canada.
+
+	Dick Beyer
+	M
+	86 years, 145 days
+	July 11, 1931
+	United States Best known for portraying the masked wrestlers The Destroyer and Doctor X. Father of Kurt Beyer. Oldest living World Heavyweight Champion (AWA)
+
+	Dave Kidney
+	M
+	85 years
+	1931
+	United Kingdom Oldest British wrestler to ever wrestle.[6]
+
+	Dominic DeNucci
+	M
+	85 years, 314 days
+	January 23, 1932
+	Italy Former WWWF Tag Team Champion
+
+	Billy Two Rivers
+	M
+	85 years, 212 days
+	May 5, 1932
+	Canada Wrestled mostly in Canada and the U.S. An actual Mohawk chief.
+
+	Danny Hodge
+	M
+	85 years, 204 days
+	May 13, 1932
+	United States Wrestled in AWA, NWA, and UWF.
+
+	Rene Goulet
+	M
+	85 years, 144 days
+	July 12, 1932
+	Canada[7] Wrestled in the WWWF(WWF) from 1971-1987 and later worked as a road agent for WWF until 1997.
+
+	Gene LeBell
+	M
+	85 years, 55 days
+	October 9, 1932
+	United States Los Angeles promoter and announcer
+
+	Caswell Martin
+	M
+	84 years
+	1932
+	The Bahamas Wrestled in the UK, Germany and Japan.
+
+	Stan Holek
+	M
+	84 years, 243 days
+	April 4, 1933
+	Canada Lives in the United States.
+
+	Dick Steinborn
+	M
+	84 years, 66 days
+	September 28, 1933
+	United States Wrestled in NWA Georgia in the 1960's and 1970's
+
+	Les Thornton
+	M
+	83 years, 238 days
+	April 9, 1934
+	United Kingdom Former WWF Junior Heavyweight Champion. Resides in Calgary, Canada.
+
+	Mr. Wrestling II
+	M
+	83 years, 84 days
+	September 10, 1934
+	United States Former NWA Florida Champion.
+
+	Jose Lothario
+	M
+	82 years, 356 days
+	December 12, 1934
+	Mexico Trainer of Shawn Michaels.
+
+	Guillotine Gordon
+	M
+	82 years, 323 days
+	January 14, 1935
+	United States Wrestled in the WWWF from 1964-1969
+
+	Dory Dixon
+	M
+	82 years, 305 days
+	February 1, 1935
+	Jamaica First Jamaican wrestler in the WWWF
+
+	Bruno Sammartino
+	M
+	82 years, 58 days
+	October 6, 1935
+	Italy The longest-reigning WWWF Champion and oldest living holder of the title.
+
+	Blackjack Lanza
+	M
+	82 years, 50 days
+	October 14, 1935
+	United States Long-standing WWF road agent. Member of The Blackjacks.
+
+	Ricky Hunter
+	M
+	81 years, 277 days
+	March 1, 1936
+	Canada Known as the Gladiator in Florida and a jobber in WWF
+
+	Beauregarde
+	M
+	81 years, 220 days
+	April 27, 1936
+	United States Known in the Pacific Northwest Wrestling and is a musician.
+
+	Larry Hennig
+	M
+	81 years, 168 days
+	June 18, 1936
+	United States "The Axe". Father of Curt Hennig. AWA legend.
+
+	Black Gordman
+	M
+	81 years, 59 days
+	October 5, 1936
+	Mexico Teamed up with the Great Goliath winning many tag team titles in the 1970's. Spent most of his career in Los Angeles.
+
+	Mark Lewin
+	M
+	80 years, 262 days
+	March 16, 1937
+	United States Multi-time regional champion, member of Kevin Sullivan's Army of Darkness.
+
+	Kenny Jay
+	M
+	80 years, 251 days
+	March 27, 1937
+	United States Known as a jobber in the American Wrestling Association
+
+	Erich Froelich
+	M
+	80 years, 214 days
+	May 3, 1937
+	Germany Lives in Canada. Spent most of his career in NWA: All-Star Wrestling
+
+	Jerry Brown
+	M
+	80 years, 207 days
+	May 10, 1937
+	United States One half of the famous 70's tag team known as The Hollywood Blondes.
+
+	Zivko Kovacic
+	M
+	80 years, 64 days
+	September 30, 1937
+	Croatia First Yugoslavian wrestler to wrestle in the WWWF.
+
+	Estrella Blanca
+	M
+	79 years, 322 days
+	January 15, 1938
+	Mexico Former AWA World Lightweight Championship
+
+	Angelo Mosca
+	M
+	79 years, 265 days
+	March 13, 1938
+	United States Dual-sport star with CFL in Canada.
+
+	Omar Atlas
+	M
+	79 years, 225 days
+	April 22, 1938
+	Venezuela Former NWA Central States Champion.
+
+	Paul Vachon
+	M
+	79 years, 203 days
+	May 14, 1938
+	Canada Former AWA Tag Team Champion.
+
+	Johnny Rodz
+	M
+	79 years, 201 days
+	May 16, 1938
+	United States WWE Hall of Famer and notable jobber in WWWF (WWF) from 1965-1985.
+	**/
+	</script>
+	
+</body>
+</html>

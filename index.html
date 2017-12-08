@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Oldest Wrestlers</title>
+		<style>
+			h1 {
+				color: white;
+				text-decoration: underline;
+			}
+			img {
+				max-height: 200px;
+			}
+			td {
+				text-align: center;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			table, th, td {
+				border: 1px solid #000000;
+			}
+			th {
+				color: white;
+				background-color: #6487af;
+				width: 300px;
+			}
+			table {
+				display: inline-block;
+			}
+			.container {
+				text-align: center;
+			}
+			h1 {
+				text-align:center;
+			}
+			
+			body {
+				background-color: #8FBC94;
+			}
+		</style>
+		<script>
+		function dateOfBirthToAge(dateOfBirth) {
+		   var ageDifMs = Date.now() - dateOfBirth.getTime();
+		   var ageDate = new Date(ageDifMs); // miliseconds from epoch
+		   var years = Math.abs(ageDate.getUTCFullYear() - 1970);
+		   ageDate.setFullYear(ageDate.getFullYear() - years);
+		   var days = Math.round(ageDate/(1000*60*60*24));
+		   return years + " years and " + days + " day" + (days !== 1 ? "s" : "");
+		 }
+		</script>
+    </head>
+    <body>
+	
+		
+			
+		<h1>Longest Living Wrestlers</h1>
+		<div class="container">
+			 <table>
+			  <tr>
+				<th>Joe D'orazio - <script>document.write(dateOfBirthToAge(new Date(1922, 6, 27)));</script></th>
+				<th>Bill Mercer - <script>document.write(dateOfBirthToAge(new Date(1926, 1, 13)));</script></th>
+				<th>Carlos Rocha - <script>document.write(dateOfBirthToAge(new Date(1927, 1, 2)));</script></th>
+			  </tr>
+			  <tr>
+				<td><a href="https://wikivisually.com/wiki/Draft:Joe_D%27Orazio" target="new"><img src="./joedorazio.jpg" /></a></td>
+				<td><a href="https://en.wikipedia.org/wiki/Bill_Mercer" target="new"><img src="./billmercer.jpg" /></a></td>
+				<td><a href="http://prowrestling.wikia.com/wiki/Carlos_Rocha" target="new"><img src="./carlosrocha.jpg" /></td>
+			  </tr>
+			  <tr>
+				<th>Bob "Cowboy" Ellis - <script>document.write(dateOfBirthToAge(new Date(1929, 2, 15)));</script></th>
+				<th>Joe Cornelius - <script>document.write(dateOfBirthToAge(new Date(1929, 4, 1)));</script></th>
+				<th>Pampero Firpo - <script>document.write(dateOfBirthToAge(new Date(1930, 3, 6)));</script></th>
+			  </tr>
+			  <tr>
+				<td><a href="http://www.onlineworldofwrestling.com/bios/b/bob-ellis/" target="new"><img src="./bobellis.jpg" /></td>
+				<td><a href="http://www.britishwrestlersreunion.com/WEBPROTECT-dazzlerjoecornelius.htm" target="new"><img src="./joecornelius.jpg" /></td>
+				<td><a href="https://en.wikipedia.org/wiki/Pampero_Firpo" target="new"><img src="./pamperofirpo.jpg" /></td>
+			  </tr>
+			</table> 
+		<div>
+    </body>
+</html>
+    
